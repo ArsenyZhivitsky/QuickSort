@@ -6,17 +6,19 @@ namespace QuickSort
 {
     class QuickSort
     {
-        public static void Sorting(double[] array, long first, long last)
+        public static void Sorting(int[] array, int first, int last)
         {
-            double element = array[(last - first) / 2 + first];
-            long i = first;
-            long j = last;
+            int element = array[(last - first) / 2 + first];
+            int i = first;
+            int j = last;
 
             while (i <= j)
             {
-                while (array[i] < element && i <= last) ++i;
+                while (array[i] < element && i <= last)
+                    ++i;
 
-                while (array[j] > element && j >= first) --j;
+                while (array[j] > element && j >= first) 
+                    --j;
 
                 if (i <= j)
                 {
@@ -28,9 +30,11 @@ namespace QuickSort
                 }
             }
 
-            if (j > first) Sorting(array, first, j);
+            if (j > first) 
+                Sorting(array, first, j);
 
-            if (i < last) Sorting(array, i, last);
+            if (i < last)
+                Sorting(array, i, last);
         }
     }
 }
