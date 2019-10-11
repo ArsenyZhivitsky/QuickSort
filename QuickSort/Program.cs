@@ -11,7 +11,7 @@ namespace QuickSort
 
             Random random = new Random();
 
-            for (int i = 0; i < array.Length; i++) 
+            for (int i = 0; i < array.Length; i++)
                 array[i] = random.Next(1, 50);
 
             Console.WriteLine("Array before sorting: \n");
@@ -19,12 +19,19 @@ namespace QuickSort
             foreach (var element in array)
                 Console.Write($"{element} ");
 
-            QuickSort.Sorting(array, 0, array.Length - 1);
+            try
+            {
+                QuickSort.Sorting(array, 0, array.Length - 1);
 
-            Console.WriteLine("\n\nArray after sorting: \n");
+                Console.WriteLine("\n\nArray after sorting: \n");
 
-            foreach (var element in array) 
-                Console.Write($"{element} ");
+                foreach (var element in array)
+                    Console.Write($"{element} ");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
 
             Console.ReadKey();
         }
