@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSort", "QuickSort\QuickSort.csproj", "{E9334B14-E346-4DA1-9239-69E4C0444ABF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickSort.Dll", "QuickSort.Dll\QuickSort.Dll.csproj", "{56FD8F90-5ABA-4964-B1F0-449363AF7DDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSort.Test", "QuickSort.Test\QuickSort.Test.csproj", "{EF8770E1-497B-41B7-A0BD-E96FB733D99F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E9334B14-E346-4DA1-9239-69E4C0444ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9334B14-E346-4DA1-9239-69E4C0444ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9334B14-E346-4DA1-9239-69E4C0444ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9334B14-E346-4DA1-9239-69E4C0444ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56FD8F90-5ABA-4964-B1F0-449363AF7DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56FD8F90-5ABA-4964-B1F0-449363AF7DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56FD8F90-5ABA-4964-B1F0-449363AF7DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56FD8F90-5ABA-4964-B1F0-449363AF7DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8770E1-497B-41B7-A0BD-E96FB733D99F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8770E1-497B-41B7-A0BD-E96FB733D99F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8770E1-497B-41B7-A0BD-E96FB733D99F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8770E1-497B-41B7-A0BD-E96FB733D99F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
