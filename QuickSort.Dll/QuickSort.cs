@@ -64,10 +64,10 @@ namespace QuickSort.Dll
             }
 
             if (j > firstIndex)
-                Sort(array, firstIndex, j);
+                PerformSort(array, firstIndex, j);
 
             if (i < lastIndex)
-                Sort(array, i, lastIndex);
+                PerformSort(array, i, lastIndex);
         }
     }
 }
