@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace QuickSort.Test
@@ -12,7 +13,7 @@ namespace QuickSort.Test
         {
             var actual = new int[10];
 
-            Random random = new Random();
+            var random = new Random();
 
             for (int i = 0; i < actual.Length; i++)
                 actual[i] = random.Next(1, 50);
@@ -43,11 +44,39 @@ namespace QuickSort.Test
             CollectionAssert.AreEqual(expected.ToArray(), actual);
         }
 
+        // Need to be able to sort using empty arrays
+        [TestMethod]
+        public void Sort_EmptyArray()
+        {
+            var actual = new int[0];
+            Dll.QuickSort.Sort(actual);
+        }
+
+        // and one element arrays
+        [TestMethod]
+        public void Sort_OneElement()
+        {
+            var actual = new[] { 1 };
+            Dll.QuickSort.Sort(actual);
+        }
+
+        // and large arrays
+        [TestMethod]
+        public void Sort_Large()
+        {
+            var rnd = new Random();
+            var arr = Enumerable.Range(0, 5000).Select(x => rnd.Next(0, 10000)).ToArray();
+            var copy = new List<int>(arr);
+            Dll.QuickSort.Sort(arr);
+            copy.Sort();
+            CollectionAssert.AreEqual(copy.ToArray(), arr);
+        }
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void Sort_NullArray_ExceptionReturn()
         {
-            Dll.QuickSort.Sort(null, 0 , 5);
+            Dll.QuickSort.Sort(null, 0, 5);
         }
 
         [TestMethod]
