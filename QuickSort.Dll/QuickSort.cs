@@ -4,6 +4,12 @@ namespace QuickSort.Dll
 {
     public static class QuickSort
     {
+        // It is much better to run it like this and encapsulate first and last indices
+        public static void Sort(int[] array)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void Sort(int[] array, int firstIndex, int lastIndex)
         {
             ValidateArguments(array, firstIndex, lastIndex);
